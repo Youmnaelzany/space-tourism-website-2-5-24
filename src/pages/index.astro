@@ -1,0 +1,31 @@
+---
+import Header from "@/components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout title="Frontend Mentor | Space tourism website">
+  <!-- THE HEADER -->
+  <Header />
+  <main></main>
+
+  <style></style>
+</Layout>
+
+<style>
+  @media (min-width: 375px) {
+    body {
+      background: url("/assets/home/background-home-mobile.jpg") no-repeat;
+    }
+  }
+  @media (min-width: 768px) {
+    body {
+      background: url("/assets/home/background-home-tablet.jpg") no-repeat;
+    }
+  }
+  @media (min-width: 1440px) {
+    body {
+      background: url("/assets/home/background-home-desktop.jpg") no-repeat;
+    }
+  }
+</style>
