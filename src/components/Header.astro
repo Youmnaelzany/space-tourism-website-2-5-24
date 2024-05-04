@@ -2,24 +2,131 @@
 import "@/styles/globals.css";
 ---
 
-<header class="headerWrappe m-6">
-  <div class="logoMenuWrapper flex items-center justify-between">
+<header
+  class="headerWrappe relative m-6 flex items-center justify-between md:m-0 md:ml-[2.44rem]"
+>
+  <div
+    class="logoMenuWrapper md: flex items-center justify-between gap-[16.44rem] md:mt-4 xl:ml-[3.44rem] xl:mt-8"
+  >
     <!-- LOGO -->
     <img src="/assets/shared/logo.svg" alt="logo" class="" />
     <!-- MENU ICON -->
     <img
       src="/assets/shared/icon-hamburger.svg"
       alt="openMenu"
-      class="md:max-xl:hidden"
+      class="z-50 md:max-2xl:hidden"
       id="openMenu"
     />
     <!-- CLOSE ICON -->
     <img
       src="/assets/shared/icon-close.svg"
       alt="closeMenu"
-      class="hidden"
+      class="z-50 hidden"
       id="closeMenu"
     />
   </div>
-  <nav class=""></nav>
+  <!-- NAV MENU FOR MOBILE DEVICE   -->
+  <nav
+    class="menuBarMobile fixed -right-6 -top-6 -z-50 hidden h-[41.6875rem] w-[15.875rem]"
+    id="menuBarMobile"
+  >
+    <ul class="flex flex-col gap-8 pl-8 pt-[7.37rem]">
+      <li class="">
+        <a
+          href="/"
+          class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#fff]"
+          ><span class="mr-[0.69rem] font-bold">00</span> Home</a
+        >
+      </li>
+      <li class="">
+        <a
+          href="/destination-moon"
+          class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#fff]"
+          ><span class="mr-[0.88rem] font-bold">01</span> Destination</a
+        >
+      </li>
+      <li class="/crew-commander">
+        <a
+          href=""
+          class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#fff]"
+          ><span class="mr-3 font-bold">02</span> Crew</a
+        >
+      </li>
+      <li class="/technology-vehicle">
+        <a
+          href=""
+          class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#fff]"
+          ><span class="mr-3 font-bold">03</span> Technology</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- NAV MENU FOR TABLET & DESKTOP DEVICE -->
+  <nav
+    class="menuBarOther hidden px-12 pb-10 pt-[2.44rem] md:h-24 md:w-[28.125rem] md:max-2xl:flex xl:relative xl:mt-8 xl:w-[51.875rem] xl:items-center xl:justify-center xl:pl-[7.69rem] xl:pr-[10.44rem] xl:after:absolute xl:after:left-[-27.375rem] xl:after:h-[0.0625rem] xl:after:w-[29.5625rem] xl:after:bg-[#fff] xl:after:opacity-[0.2515]"
+  >
+    <ul
+      class="flex items-center justify-between gap-[2.31rem] xl:justify-center"
+    >
+      <li
+        class="realative after:visited:absolute after:visited:bottom-0 after:visited:h-[0.1875rem] after:visited:w-[4.375rem] after:visited:bg-[#fff]"
+      >
+        <a
+          href="/"
+          class="font-barlow-condensed text-sm font-normal leading-normal tracking-[0.14763rem] text-[#fff] xl:text-base"
+          ><span class="mr-3 hidden md:hidden xl:inline xl:font-bold">00</span
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/destination-moon"
+          class="font-barlow-condensed text-sm font-normal leading-normal tracking-[0.14763rem] text-[#fff] xl:text-base"
+          ><span class="mr-3 hidden md:hidden xl:inline xl:font-bold">01</span
+          >Destination</a
+        >
+      </li>
+      <li>
+        <a
+          href="/crew-commander"
+          class="font-barlow-condensed text-sm font-normal leading-normal tracking-[0.14763rem] text-[#fff] xl:text-base"
+          ><span class="mr-3 hidden md:hidden xl:inline xl:font-bold">02</span
+          >Crew</a
+        >
+      </li>
+      <li>
+        <a
+          href="/technology-vehicle"
+          class="font-barlow-condensed text-sm font-normal leading-normal tracking-[0.14763rem] text-[#fff] xl:text-base"
+          ><span class="mr-3 hidden md:hidden xl:inline xl:font-bold">03</span
+          >Technology</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<style>
+  .menuBarMobile,
+  .menuBarOther {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+  }
+</style>
+
+<script is:inline>
+  const openMenu = document.querySelector("#openMenu");
+  const closeMenu = document.querySelector("#closeMenu");
+  const menuBarMobile = document.querySelector("#menuBarMobile");
+
+  openMenu.addEventListener("click", () => {
+    menuBarMobile.classList.remove("hidden");
+    openMenu.classList.add("hidden");
+    closeMenu.classList.remove("hidden");
+  });
+  closeMenu.addEventListener("click", () => {
+    menuBarMobile.classList.add("hidden");
+    closeMenu.classList.add("hidden");
+    openMenu.classList.remove("hidden");
+  });
+</script>
