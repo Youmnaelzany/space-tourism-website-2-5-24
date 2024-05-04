@@ -8,23 +8,25 @@ import "@/styles/globals.css";
   <!-- THE HEADER -->
   <Header />
   <!-- THE MAIN SECTION -->
-  <main class="flex flex-col gap-[5.06rem] text-center">
+  <main
+    class="flex flex-col gap-[5.06rem] text-center md:gap-[9.75rem] xl:mx-[10.28rem] xl:mt-40 xl:flex-row xl:items-center xl:justify-between xl:text-left"
+  >
     <!-- TEXT -->
     <section
-      class="mt-[3.63rem] flex flex-col items-center gap-4 text-center md:mt-[6.63rem] md:gap-6"
+      class="mt-[3.63rem] flex flex-col items-center gap-4 text-center md:mt-[6.63rem] md:gap-6 xl:items-start xl:text-left 2xl:w-[27.75rem] 2xl:gap-6"
     >
       <h1
-        class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#D0D6F9] md:text-xl md:tracking-[0.21094rem]"
+        class="font-barlow-condensed text-base font-normal leading-normal tracking-[0.16875rem] text-[#D0D6F9] md:text-2xl md:tracking-[0.21094rem] 2xl:text-[1.75rem]"
       >
         So, you want to travel to
       </h1>
       <h2
-        class="font-bellefair text-[5rem] font-normal leading-[6.25rem] text-[#fff] md:text-[9.375rem] md:leading-[9.375rem]"
+        class="font-bellefair text-[5rem] font-normal leading-[6.25rem] text-[#fff] md:max-2xl:text-[9.375rem] md:max-2xl:leading-[9.375rem]"
       >
         Space
       </h2>
       <p
-        class="w-[20.4375rem] text-[0.9375rem] font-normal leading-[1.5625rem] text-[#D0D6F9] md:w-[27.75rem] md:text-base md:leading-7"
+        class="w-[20.4375rem] text-[0.9375rem] font-normal leading-[1.5625rem] text-[#D0D6F9] md:text-base md:leading-7 md:max-2xl:w-[27.75rem] 2xl:text-lg 2xl:leading-8"
       >
         Let&#39;s face it; if you want to go to space, you might as well
         genuinely go to outer space and not hover kind of on the edge of it.
@@ -33,19 +35,16 @@ import "@/styles/globals.css";
       </p>
     </section>
     <!-- EXPLORE -->
-    <section class="flex items-center justify-center text-center">
+    <section class="flex items-center justify-center text-center xl:self-end">
       <div
-        class="relative size-[16.375rem] rounded-full bg-[#fff] opacity-[0.1036]"
+        class="relative z-50 flex size-[9.375rem] items-center justify-center rounded-full bg-[#fff] text-center after:hover:absolute after:hover:-z-50 after:hover:size-[16.375rem] after:hover:rounded-full after:hover:bg-[#FFF] after:hover:opacity-[0.1036] md:size-[15.125rem] md:after:hover:size-[22.125rem] 2xl:size-[17.125rem] 2xl:after:hover:size-[28.125rem]"
       >
-      </div>
-      <div
-        class="absolute flex size-[9.375rem] items-center justify-center rounded-full bg-[#fff] text-center"
-      >
-        <h2
-          class="font-barlow text-xl font-normal leading-normal tracking-[0.07813rem] text-[#0B0D17]"
+        <a
+          href="/"
+          class="font-bellefair text-2xl font-normal leading-normal tracking-[0.07813rem] text-[#0B0D17] md:text-[2rem] md:tracking-[0.125rem]"
         >
           Explore
-        </h2>
+        </a>
       </div>
     </section>
   </main>

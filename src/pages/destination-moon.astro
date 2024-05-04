@@ -1,0 +1,74 @@
+---
+import Header from "@/components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout title="Frontend Mentor | Space tourism website">
+  <!-- THE HEADER -->
+  <Header />
+  <!-- THE MAIN SECTION -->
+  <main>
+    <section class="">
+      <div class="">
+        <h1 class="">01 Pick your destination</h1>
+      </div>
+      <div class="">
+        <img src="/assets/destination/image-moon.png" alt="the moon" class="" />
+      </div>
+    </section>
+
+    <section class="">
+      <ul class="">
+        <li class=""><a href="" class="">Moon</a></li>
+        <li class=""><a href="" class="">Mars</a></li>
+        <li class=""><a href="" class="">Europa</a></li>
+        <li class=""><a href="" class="">Titan</a></li>
+      </ul>
+
+      <div class="">
+        <h2 class="">Moon</h2>
+        <p class="">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+      </div>
+      <div class="">
+        <h3 class="">Avg. distance</h3>
+        <h4 class="">384,400 km</h4>
+      </div>
+
+      <div class="">
+        <h3 class="">Est. travel time</h3>
+        <h4 class="">3 days</h4>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @media (min-width: 375px) {
+    body {
+      background: url("/assets/destination/background-destination-mobile.jpg")
+        no-repeat;
+      background-size: cover;
+      mix-blend-mode: screen;
+    }
+  }
+  @media (min-width: 768px) {
+    body {
+      background: url("/assets/destination/background-destination-tablet.jpg")
+        no-repeat;
+      background-size: cover;
+    }
+  }
+  @media (min-width: 1440px) {
+    body {
+      background: url("/assets/destination/background-destination-desktop.jpg")
+        no-repeat;
+      background-size: cover;
+    }
+  }
+</style>
